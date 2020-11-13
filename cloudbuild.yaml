@@ -17,3 +17,12 @@ steps:
     args:
       - 'push'
       - 'gcr.io/$PROJECT_ID/kafka:$SHORT_SHA'
+
+  # This step deploys the application in Kubernetes
+#  - name: 'gcr.io/cloud-builders/gke-deploy'
+#    args:
+#      - run
+#      - --filename=app.yaml
+#      - --image=gcr.io/$PROJECT_ID/kafka:$SHORT_SHA
+#      - --location=us-central1-c
+#      - --cluster=cluster-1
